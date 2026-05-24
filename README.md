@@ -55,5 +55,60 @@ sudo apt upgrade -y
 sudo apt install -y curl wget git htop unzip net-tools ufw
 sudo ufw allow OpenSSH
 sudo ufw enable
+sudo ufw status```
+
+## Firewall
+
+UFW was enabled with OpenSSH allowed to keep remote administration available.
+
+```bash
+sudo ufw allow OpenSSH
+sudo ufw enable
 sudo ufw status
+
+## Docker Installation
+
+Docker Engine was installed using Docker's official apt repository.
+
+Installed components:
+
+- Docker Engine
+- Docker CLI
+- containerd
+- Docker Buildx plugin
+- Docker Compose plugin
+
+The installation was verified by running:
+
+```bash
+docker run hello-world
+docker compose version
+
+## Docker Installation
+
+Docker Engine was installed using Docker's official apt repository.
+
+Installed components:
+
+- Docker Engine
+- Docker CLI
+- containerd
+- Docker Buildx plugin
+- Docker Compose plugin
+
+The installation was verified by running:
+
+```bash
+docker run hello-world
+docker compose version
+
+Docker was configured so the regular user can run Docker commands without using sudo.
+
+
+Commit dette:
+
+```bash
+git add README.md
+git commit -m "document docker installation"
+git push
 
