@@ -36,6 +36,17 @@ This project documents the setup of a self-hosted Ubuntu Server running on an HP
 - Installed basic administration tools
 - Enabled UFW firewall for SSH access
 
+Current Status
+
+The server is installed, reachable over SSH, and ready for future homelab services.
+
+Future Improvements
+Install Docker and Docker Compose
+Deploy a Minecraft server using containers
+Add monitoring with Prometheus and Grafana
+Add automated backups
+Configure Cloudflare DNS for public services
+
 ## Useful Commands
 
 ```bash
@@ -45,3 +56,4 @@ sudo apt install -y curl wget git htop unzip net-tools ufw
 sudo ufw allow OpenSSH
 sudo ufw enable
 sudo ufw status
+
