@@ -1,2 +1,47 @@
-# homelab-linux-server
-Ubuntu Server homelab running on an HP EliteDesk, configured for headless SSH administration, static DHCP reservation, basic Linux setup, and future self-hosted services.
+# Homelab Linux Server
+
+## Overview
+
+This project documents the setup of a self-hosted Ubuntu Server running on an HP EliteDesk. The server is configured for headless administration over SSH and will be used as the foundation for future Docker, monitoring, backup, and self-hosted service projects.
+
+## Hardware
+
+- HP EliteDesk
+- 16 GB RAM
+- Local SSD storage
+- Ethernet connection
+
+## Network Setup
+
+- Local IP reserved through router DHCP reservation
+- Server IP: `192.168.1.41`
+- SSH enabled for remote administration
+
+## Tech Stack
+
+- Ubuntu Server
+- OpenSSH
+- UFW firewall
+- Linux CLI
+- Git
+
+## Setup Process
+
+- Installed Ubuntu Server
+- Configured user account and hostname
+- Enabled OpenSSH during installation
+- Reserved local IP address in router using DHCP reservation
+- Verified SSH access from main PC
+- Updated system packages
+- Installed basic administration tools
+- Enabled UFW firewall for SSH access
+
+## Useful Commands
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y curl wget git htop unzip net-tools ufw
+sudo ufw allow OpenSSH
+sudo ufw enable
+sudo ufw status
