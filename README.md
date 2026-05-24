@@ -36,7 +36,7 @@ This project documents the setup of a self-hosted Ubuntu Server running on an HP
 - Installed basic administration tools
 - Enabled UFW firewall for SSH access
 
-Current Status
+##Current Status
 
 The server is installed, reachable over SSH, and ready for future homelab services.
 
