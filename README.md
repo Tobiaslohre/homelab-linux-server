@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project documents the setup of a self-hosted Ubuntu Server running on an HP EliteDesk. The server is configured for headless administration over SSH and will be used as the foundation for future Docker, monitoring, backup, and self-hosted service projects.
+This project documents the setup of a self-hosted Ubuntu Server running on an HP EliteDesk.
+
+The server is configured for headless administration over SSH and will be used as the foundation for future Docker, monitoring, backup, and self-hosted service projects.
 
 ## Hardware
 
@@ -22,6 +24,8 @@ This project documents the setup of a self-hosted Ubuntu Server running on an HP
 - Ubuntu Server
 - OpenSSH
 - UFW firewall
+- Docker Engine
+- Docker Compose
 - Linux CLI
 - Git
 
@@ -35,80 +39,53 @@ This project documents the setup of a self-hosted Ubuntu Server running on an HP
 - Updated system packages
 - Installed basic administration tools
 - Enabled UFW firewall for SSH access
-
-## Current Status
-
-The server is installed, reachable over SSH, and ready for future homelab services.
-
-Future Improvements
-Install Docker and Docker Compose
-Deploy a Minecraft server using containers
-Add monitoring with Prometheus and Grafana
-Add automated backups
-Configure Cloudflare DNS for public services
+- Installed Docker Engine using Docker's official apt repository
+- Verified Docker installation with `hello-world`
+- Verified Docker Compose installation
 
 ## Useful Commands
 
 ```bash
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y curl wget git htop unzip net-tools ufw
-sudo ufw allow OpenSSH
-sudo ufw enable
-sudo ufw status```
+sudo apt install -y curl wget git htop unzip net-tools ufw```
 
-## Firewall
+Firewall
 
 UFW was enabled with OpenSSH allowed to keep remote administration available.
 
-```bash
 sudo ufw allow OpenSSH
 sudo ufw enable
 sudo ufw status
-
-## Docker Installation
-
-Docker Engine was installed using Docker's official apt repository.
-
-Installed components:
-
-- Docker Engine
-- Docker CLI
-- containerd
-- Docker Buildx plugin
-- Docker Compose plugin
-
-The installation was verified by running:
-
-```bash
-docker run hello-world
-docker compose version
-
-## Docker Installation
+Docker Installation
 
 Docker Engine was installed using Docker's official apt repository.
 
 Installed components:
 
-- Docker Engine
-- Docker CLI
-- containerd
-- Docker Buildx plugin
-- Docker Compose plugin
+Docker Engine
+Docker CLI
+containerd
+Docker Buildx plugin
+Docker Compose plugin
 
 The installation was verified by running:
 
-```bash
 docker run hello-world
 docker compose version
 
 Docker was configured so the regular user can run Docker commands without using sudo.
 
+Current Status
 
-Commit dette:
+The server is installed, reachable over SSH, protected with a basic UFW firewall, and has Docker Engine and Docker Compose installed.
 
-```bash
-git add README.md
-git commit -m "document docker installation"
-git push
+It is now ready for future homelab services.
 
+Future Improvements
+Deploy a Minecraft server using Docker Compose
+Add monitoring with Prometheus and Grafana
+Add automated backups
+Configure Cloudflare DNS for public services
+Add Uptime Kuma for service status monitoring
+Add server hardening and SSH key authentication
