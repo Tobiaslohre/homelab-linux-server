@@ -48,44 +48,51 @@ The server is configured for headless administration over SSH and will be used a
 ```bash
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y curl wget git htop unzip net-tools ufw```
+sudo apt install -y curl wget git htop unzip net-tools ufw
+```
 
-Firewall
+## Firewall
 
 UFW was enabled with OpenSSH allowed to keep remote administration available.
 
+```bash
 sudo ufw allow OpenSSH
 sudo ufw enable
 sudo ufw status
-Docker Installation
+```
+
+## Docker Installation
 
 Docker Engine was installed using Docker's official apt repository.
 
 Installed components:
 
-Docker Engine
-Docker CLI
-containerd
-Docker Buildx plugin
-Docker Compose plugin
+- Docker Engine
+- Docker CLI
+- containerd
+- Docker Buildx plugin
+- Docker Compose plugin
 
 The installation was verified by running:
 
+```bash
 docker run hello-world
 docker compose version
+```
 
-Docker was configured so the regular user can run Docker commands without using sudo.
+Docker was configured so the regular user can run Docker commands without using `sudo`.
 
-Current Status
+## Current Status
 
 The server is installed, reachable over SSH, protected with a basic UFW firewall, and has Docker Engine and Docker Compose installed.
 
 It is now ready for future homelab services.
 
-Future Improvements
-Deploy a Minecraft server using Docker Compose
-Add monitoring with Prometheus and Grafana
-Add automated backups
-Configure Cloudflare DNS for public services
-Add Uptime Kuma for service status monitoring
-Add server hardening and SSH key authentication
+## Future Improvements
+
+- Deploy a Minecraft server using Docker Compose
+- Add monitoring with Prometheus and Grafana
+- Add automated backups
+- Configure Cloudflare DNS for public services
+- Add Uptime Kuma for service status monitoring
+- Add server hardening and SSH key authentication
