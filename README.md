@@ -21,6 +21,13 @@ The server is configured for headless administration over SSH and will be used a
 - Server IP: `192.168.1.41`
 - SSH enabled for remote administration
 
+## SSH Access
+
+The server is managed remotely from the main PC using SSH.
+
+```bash
+ssh tobias@192.168.1.41
+```
 ## Tech Stack
 
 - Ubuntu Server
@@ -86,9 +93,7 @@ Docker was configured so the regular user can run Docker commands without using 
 
 ## Current Status
 
-The server is installed, reachable over SSH, protected with a basic UFW firewall, and has Docker Engine and Docker Compose installed.
-
-It is now ready for future homelab services.
+The Minecraft server is running in Docker on the homelab server and is accessible from the local network. Public access through DNS and router port forwarding is being configured.
 
 ## Future Improvements
 
