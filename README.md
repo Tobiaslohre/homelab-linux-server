@@ -1,6 +1,8 @@
-# Homelab Linux Server
+# Homelab Linux Server Foundation
 
 ## Overview
+
+This repository acts as the base infrastructure layer for future homelab projects, including Dockerized game servers, monitoring, backups, and public service exposure.
 
 This project documents the setup of a self-hosted Ubuntu Server running on an HP EliteDesk.
 
